@@ -1,7 +1,4 @@
 ﻿streamlit
 Pillow
-smtplib
-email
-os
 exp
 base64

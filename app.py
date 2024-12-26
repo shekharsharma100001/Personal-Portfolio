@@ -56,7 +56,7 @@ ribbon_html = """
 
 
 # Load an image from local file
-image_path = os.path.join(r"images\profile.png")
+image_path = os.path.join(r"images/profile.png")
 image = Image.open(image_path)
 
 # Display the image at the top of the sidebar with various parameters

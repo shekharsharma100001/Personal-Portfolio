@@ -63,7 +63,7 @@ image = Image.open(image_path)
 st.sidebar.image(
     image,
     width=None,
-    use_column_width=True,
+    use_container_width=True,
     clamp=True,
     channels="auto",
     output_format="PNG",
@@ -112,7 +112,7 @@ if page == "Home":
         with open(file_path, "rb") as f:
             return base64.b64encode(f.read()).decode()
     # Convert the GIF to Base64
-    gif_data = get_base64_file("images\github_banner.gif")
+    gif_data = get_base64_file(r"images/github_banner.gif")
     # Embed the GIF in HTML
     st.markdown(
     f'<img src="data:image/gif;base64,{gif_data}" alt="Animated GIF" style="width:100%;">',
@@ -122,8 +122,7 @@ if page == "Home":
     col1.header("Hello, This is :green[Shekhar Sharma].")
     col1.header("Python Developer")
     col1.header("Machine Learning, Artificial Intelligence and Data Science enthusiast")
-    home_image_path = os.path.join("C:\\Users\\shekh\\OneDrive\\Desktop\\Portfolio\\images", "home.png")
-    col2.image(home_image_path,use_column_width=True)
+    col2.image(r"images/home.png",use_container_width=True)
 
 
 
@@ -134,19 +133,19 @@ elif page == "Certifications":
         cert1.header("Introduction to Business Intelligence")
         cert1.subheader("Infosys Springboard")
         cert1.write("Acquired foundational knowledge of BI tools and techniques for data-driven decision-making.")
-        img1.image('images\BI.png',use_column_width=True)
+        img1.image(r'images/BI.png',use_container_width=True)
     with st.container(border = True):
         cert2, img2 = st.columns(2)
         cert2.header("MultiDimensional Data Modeling")
         cert2.subheader("Infosys Springboard")
         cert2.write("Gained expertise in designing and implementing efficient multidimensional schemas for data warehousing.")
-        img2.image('images\mddm.png',use_column_width=True)
+        img2.image(r'images/mddm.png',use_container_width=True)
     with st.container(border = True):
         cert3, img3 = st.columns(2)
         cert3.header("Tableau")
         cert3.subheader("Itronix Solutions")
         cert3.write("Mastered data visualization and analytical storytelling using Tableau.")
-        img3.image('images\itronix.jpg',use_column_width=True)
+        img3.image(r'images/itronix.jpg',use_container_width=True)
 
 
 
@@ -173,13 +172,13 @@ elif page == "Skills":
     st.header('Programming Languages')
     con = st.container(border=True)
     p1,p2,p3,p4,p5 = con.columns(5)
-    p1.image(r"images/portfolio_img/py_logo.png",caption="Python", use_column_width=True)
-    p2.image(r'images/portfolio_img/R.png',caption="R", use_column_width=True)
-    p3.image(r"images/portfolio_img/cpp.png",caption="C++", use_column_width=True)
-    p4.image(r"images/portfolio_img/c.png",caption="C", use_column_width=True)
-    p5.image(r"images/portfolio_img/java.png",caption="Java", use_column_width=True)
+    p1.image(r"images/portfolio_img/py_logo.png",caption="Python", use_container_width=True)
+    p2.image(r'images/portfolio_img/R.png',caption="R", use_container_width=True)
+    p3.image(r"images/portfolio_img/cpp.png",caption="C++", use_container_width=True)
+    p4.image(r"images/portfolio_img/c.png",caption="C", use_container_width=True)
+    p5.image(r"images/portfolio_img/java.png",caption="Java", use_container_width=True)
     p6,p7,p8,p9,p10 = con.columns(5)
-    p6.image(r"images/portfolio_img/js.png",caption="Java Script", use_column_width=True)
+    p6.image(r"images/portfolio_img/js.png",caption="Java Script", use_container_width=True)
 
 
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
@@ -187,43 +186,43 @@ elif page == "Skills":
     st.header('Libraries')
     con2 = st.container(border=True)
     l1,l2,l3,l4,l5 = con2.columns(5)
-    l1.image(r"images/portfolio_img/numpy.png",caption="Numpy", use_column_width=True)
-    l2.image(r'images/portfolio_img/Pandas.png',caption="Pandas", use_column_width=True)
-    l3.image(r"images/portfolio_img/mat.png",caption="Matplotlib", use_column_width=True)
-    l4.image(r"images/portfolio_img/scikit.png",caption="Scikit Learn", use_column_width=True)
-    l5.image(r"images/portfolio_img/seaborn.png",caption="Seaborn", use_column_width=True)
+    l1.image(r"images/portfolio_img/numpy.png",caption="Numpy", use_container_width=True)
+    l2.image(r'images/portfolio_img/Pandas.png',caption="Pandas", use_container_width=True)
+    l3.image(r"images/portfolio_img/mat.png",caption="Matplotlib", use_container_width=True)
+    l4.image(r"images/portfolio_img/scikit.png",caption="Scikit Learn", use_container_width=True)
+    l5.image(r"images/portfolio_img/seaborn.png",caption="Seaborn", use_container_width=True)
     l6,l7,l8,l9,l10 = con2.columns(5)
-    l6.image(r"images/portfolio_img/tkinter.png",caption="Tkinter", use_column_width=True)
-    l7.image(r"images/portfolio_img/selenium.1024x993.png",caption="Selenium", use_column_width=True)
-    l8.image(r"images/portfolio_img/soup.png",caption="Beautiful Soup", use_column_width=True)
-    l9.image(r"images/portfolio_img/cv2.png",caption="Open CV", use_column_width=True)
+    l6.image(r"images/portfolio_img/tkinter.png",caption="Tkinter", use_container_width=True)
+    l7.image(r"images/portfolio_img/selenium.1024x993.png",caption="Selenium", use_container_width=True)
+    l8.image(r"images/portfolio_img/soup.png",caption="Beautiful Soup", use_container_width=True)
+    l9.image(r"images/portfolio_img/cv2.png",caption="Open CV", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
     
     st.header('Frameworks')
     con3 = st.container(border=True)
     a2,b2,c2,d2,e2 = con3.columns(5)
-    a2.image(r"images/portfolio_img/streamlt.png",caption="Streamlit", use_column_width=True)
-    b2.image(r"images/portfolio_img/flask.png",caption="Flask", use_column_width=True)
+    a2.image(r"images/portfolio_img/streamlt.png",caption="Streamlit", use_container_width=True)
+    b2.image(r"images/portfolio_img/flask.png",caption="Flask", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
     
     st.header('Data Analysis & BI Tools')
     con4 = st.container(border=True)
     a3,b3,c3,d3,e3 = con4.columns(5)
-    a3.image(r"images/portfolio_img/tableu.png",caption="Tableu", use_column_width=True)
-    b3.image(r"images/portfolio_img/powerbi.png",caption="Power BI", use_column_width=True)
-    c3.image(r"images/portfolio_img/sql.png",caption="MySQL", use_column_width=True)
-    d3.image(r"images/portfolio_img/mongo.png",caption="MongoDB", use_column_width=True)
+    a3.image(r"images/portfolio_img/tableu.png",caption="Tableu", use_container_width=True)
+    b3.image(r"images/portfolio_img/powerbi.png",caption="Power BI", use_container_width=True)
+    c3.image(r"images/portfolio_img/sql.png",caption="MySQL", use_container_width=True)
+    d3.image(r"images/portfolio_img/mongo.png",caption="MongoDB", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
     
     st.header('Developer Tools')
     con5 = st.container(border=True)
     a4,b4,c4,d4,e4 = con5.columns(5)
-    a4.image(r"images/portfolio_img/git.png",caption="Git", use_column_width=True)
-    b4.image(r"images/portfolio_img/anaconda.png",caption="Anaconda Navigator", use_column_width=True)
-    c4.image(r"images/portfolio_img/colab.png",caption="Google Colab", use_column_width=True)
+    a4.image(r"images/portfolio_img/git.png",caption="Git", use_container_width=True)
+    b4.image(r"images/portfolio_img/anaconda.png",caption="Anaconda Navigator", use_container_width=True)
+    c4.image(r"images/portfolio_img/colab.png",caption="Google Colab", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: ##74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
 
@@ -236,7 +235,7 @@ elif page == "Education":
     c1.subheader('B.Tech')
     c1.subheader('Information Technology')
     c1.subheader("2022-2026")
-    des_img1.image(r"images/knit.gif", use_column_width=True)
+    des_img1.image(r"images/knit.gif", use_container_width=True)
 
     des2, des_img2 = st.columns(2)
     c2 = des2.container(border= True)
@@ -244,11 +243,11 @@ elif page == "Education":
     c2.subheader('Intermediate (2022)')
     c2.subheader('PCM with Computer Science')
     c2.subheader("Percentage : 97%")
-    des_img2.image(r"images/ivri.gif", use_column_width=True)
+    des_img2.image(r"images/ivri.gif", use_container_width=True)
     pic1,pic2,pic3 = st.columns(3)
-    pic1.image(r"images/ivri1.jpg",use_column_width=True)
-    pic2.image(r"images/ivri2.jpg",use_column_width=True)
-    pic3.image(r"images/knit.jpg",use_column_width=True)
+    pic1.image(r"images/ivri1.jpg",use_container_width=True)
+    pic2.image(r"images/ivri2.jpg",use_container_width=True)
+    pic3.image(r"images/knit.jpg",use_container_width=True)
     
 
 
@@ -256,7 +255,7 @@ elif page == "Experience":
     st.title(":orange[Experience]")
     with st.container(border = True):
         des,pic = st.columns(2)
-        pic.image(r'images/exp.png',use_column_width=True)
+        pic.image(r'images/exp.png',use_container_width=True)
         des.header("AI: Transformative Learning with TechSaksham")
         pic.subheader("Edunet Foundation")
         pic.write("Worked as an Intern  with TechSaksham - A joint CSR initiative of Microsoft & SAP, focusing on AI Technologies")
@@ -271,7 +270,7 @@ elif page == "Projects":
 
     st.header('StreamDigest')
     p1, p2 = st.columns(2)
-    p1.image(r"images/portfolio_img/summarizer.png", use_column_width=True)
+    p1.image(r"images/portfolio_img/summarizer.png", use_container_width=True)
     p2.write('### Project Description:')
     p2.write('Created a web application that geneartes summary of given Yt video. It fetches the trascript of video and summarizes that transcript in English. The summary can be imported as pdf file.')
     tech_stack = [
@@ -291,7 +290,7 @@ elif page == "Projects":
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
     st.header('Endorse- Telegram Bot')
     p3,p4 = st.columns(2)
-    p3.image(r"images/portfolio_img/endorse.png", use_column_width=True)
+    p3.image(r"images/portfolio_img/endorse.png", use_container_width=True)
     p4.write('### Project Description:')
     p4.write('Crafted a Telegram bot named **Endorse** to assist college students. This Bot allows students to access curated study materials for all subjects, including lecture notes, textbooks, and other additional resources with an intuitive interface, find resources quickly anytime, anywhere via Telegram.')
     tech_stack2 = [
@@ -309,7 +308,7 @@ elif page == "Projects":
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
     st.header('Computer Vision with IOT')
     p5,p6 = st.columns(2)
-    p5.image(r"images/portfolio_img/computer_vision.png", use_column_width=True)
+    p5.image(r"images/portfolio_img/computer_vision.png", use_container_width=True)
     p6.write('### Project Description:')
     p6.write('This project is basically the Convergence of Computer Vision and IoT: A New Era of Intelligent Systems. Using OpenCV, MediaPipe and Microcontroller ESP8266, developed a system where simple hand gestures control the lamp, making it more intuitive and user-friendly.')
     tech_stack3 = [
@@ -328,7 +327,7 @@ elif page == "Projects":
 
     st.header('Word Guess')
     p7,p8 = st.columns(2)
-    p7.image(r"images/portfolio_img/word_guess.png", use_column_width=True)
+    p7.image(r"images/portfolio_img/word_guess.png", use_container_width=True)
     p8.write('### Project Description:')
     p8.write('The Word Guess Game is a software project that provides interactive GUI and sound effects. User is asked with some hints and the Game accurately guesses the word that player thinks of.')
     tech_stack4 = [
@@ -346,7 +345,7 @@ elif page == "Projects":
 
     st.header('Rock-Paper-Scissors')
     p9,p10 = st.columns(2)
-    p9.image(r"images/portfolio_img\rsp.png", use_column_width=True)
+    p9.image(r"images/portfolio_img/rsp.png", use_container_width=True)
     p10.write('### Project Description:')
     p10.write('The "Rock-Paper-Scissors Game with Tkinter" project aims to bring the classic hand game to life through an interactive and visually engaging graphical user interface (GUI)')
     tech_stack4 = [

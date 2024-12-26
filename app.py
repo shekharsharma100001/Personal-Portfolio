@@ -19,7 +19,7 @@ def send_email(subject, message, sender_email):
     msg["From"] = EMAIL_ADDRESS
     msg["To"] = RECEIVER_EMAIL
     msg["Subject"] = subject
-    msg.attach(MIMEText(message, "plain"))
+    msg.attach(MIMEText(message, "plain",'utf-8'))
 
     try:
         # Connect to the Gmail SMTP server

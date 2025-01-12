@@ -146,6 +146,12 @@ elif page == "Certifications":
         cert3.subheader("Itronix Solutions")
         cert3.write("Mastered data visualization and analytical storytelling using Tableau.")
         img3.image(r'images/itronix.jpg',use_container_width=True)
+    with st.container(border = True):
+        cert4, img4 = st.columns(2)
+        cert4.header("Industrial Training on Coding Skills")
+        cert4.subheader("Java T Point")
+        cert4.write("Mastered the concepts of Object Oriented Programming and various data structures through the 2 months industrial training program conducted by TPoint Tech.")
+        img4.image(r'images/JavaTPoint',use_container_width=True)
 
 
 

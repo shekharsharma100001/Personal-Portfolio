@@ -151,7 +151,7 @@ elif page == "Certifications":
         cert4.header("Industrial Training on Coding Skills")
         cert4.subheader("Java T Point")
         cert4.write("Mastered the concepts of Object Oriented Programming and various data structures through the 2 months industrial training program conducted by TPoint Tech.")
-        img4.image(r'images/JavaTPoint',use_container_width=True)
+        img4.image(r'images/JavaTPoint.png',use_container_width=True)
 
 
 

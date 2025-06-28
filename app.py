@@ -202,14 +202,23 @@ elif page == "Skills":
     l7.image(r"images/portfolio_img/selenium.1024x993.png",caption="Selenium", use_container_width=True)
     l8.image(r"images/portfolio_img/soup.png",caption="Beautiful Soup", use_container_width=True)
     l9.image(r"images/portfolio_img/cv2.png",caption="Open CV", use_container_width=True)
+    l10.image(r"images/portfolio_img/Keras.png",caption="Keras", use_container_width=True)
+    l11,l12,l13,l14,l15 = con2.columns(5)
+    l11.image(r"images/portfolio_img/TensorFlow.png",caption="TensorFlow", use_container_width=True)
+    l12.image(r"images/portfolio_img/PyTorch.png",caption="PyTorch", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
     
     st.header('Frameworks')
     con3 = st.container(border=True)
-    a2,b2,c2,d2,e2 = con3.columns(5)
-    a2.image(r"images/portfolio_img/streamlt.png",caption="Streamlit", use_container_width=True)
-    b2.image(r"images/portfolio_img/flask.png",caption="Flask", use_container_width=True)
+    f1,f2,f3,f4,f5 = con3.columns(5)
+    f1.image(r"images/portfolio_img/streamlt.png",caption="Streamlit", use_container_width=True)
+    f2.image(r"images/portfolio_img/flask.png",caption="Flask", use_container_width=True)
+    f3.image(r"images/portfolio_img/FastAPI.png",caption="FastAPI", use_container_width=True)
+    f4.image(r"images/portfolio_img/langChain.png",caption="LangChain", use_container_width=True)
+    f5.image(r"images/portfolio_img/langgraph-color.png",caption="LangGraph", use_container_width=True)
+    f6,f7,f8,f9,f10 = con3.columns(5)
+    f6.image(r"images/portfolio_img/llama.png",caption="LlamaIndex", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
     

@@ -225,7 +225,7 @@ elif page == "Skills":
     con4 = st.container(border=True)
     a3,b3,c3,d3,e3 = con4.columns(5)
     a3.image(r"images/portfolio_img/sql.png",caption="MySQL", use_container_width=True)
-    d3.image(r"images/portfolio_img/mongo.png",caption="MongoDB", use_container_width=True)
+    b3.image(r"images/portfolio_img/mongo.png",caption="MongoDB", use_container_width=True)
     c3.image(r"images/portfolio_img/chromaDB.png",caption="ChromaDB", use_container_width=True)
     d3.image(r"images/portfolio_img/faiss.png",caption="FAISS", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)

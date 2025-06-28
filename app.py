@@ -238,9 +238,8 @@ elif page == "Education":
     des1, des_img1 = st.columns(2)
     c1 = des1.container(border= True)
     c1.header(":blue[Kamla Nehru Institute of Technology, Sultanpur]")
-    c1.subheader('B.Tech')
+    c1.subheader('B.Tech (2022-2026)')
     c1.subheader('Information Technology')
-    c1.subheader("2022-2026")
     c1.subheader("CGPA: 9.23")
     des_img1.image(r"images/knit.gif", use_container_width=True)
 

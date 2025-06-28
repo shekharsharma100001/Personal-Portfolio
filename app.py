@@ -220,24 +220,32 @@ elif page == "Skills":
     f6,f7,f8,f9,f10 = con3.columns(5)
     f6.image(r"images/portfolio_img/llama.png",caption="LlamaIndex", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
-
     
-    st.header('Data Analysis & BI Tools')
+    st.header('Databases & Vector Stores')
     con4 = st.container(border=True)
     a3,b3,c3,d3,e3 = con4.columns(5)
-    a3.image(r"images/portfolio_img/tableu.png",caption="Tableu", use_container_width=True)
-    b3.image(r"images/portfolio_img/powerbi.png",caption="Power BI", use_container_width=True)
-    c3.image(r"images/portfolio_img/sql.png",caption="MySQL", use_container_width=True)
+    a3.image(r"images/portfolio_img/sql.png",caption="MySQL", use_container_width=True)
     d3.image(r"images/portfolio_img/mongo.png",caption="MongoDB", use_container_width=True)
+    c3.image(r"images/portfolio_img/chromaDB.png",caption="ChromaDB", use_container_width=True)
+    d3.image(r"images/portfolio_img/faiss.png",caption="FAISS", use_container_width=True)
+    st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
+    
+    st.header('Data Analysis Tools')
+    con4 = st.container(border=True)
+    d1,d2,d3,d4,d5 = con4.columns(5)
+    d1.image(r"images/portfolio_img/tableu.png",caption="Tableu", use_container_width=True)
+    d2.image(r"images/portfolio_img/powerbi.png",caption="Power BI", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
     
     st.header('Developer Tools')
     con5 = st.container(border=True)
-    a4,b4,c4,d4,e4 = con5.columns(5)
-    a4.image(r"images/portfolio_img/git.png",caption="Git", use_container_width=True)
-    b4.image(r"images/portfolio_img/anaconda.png",caption="Anaconda Navigator", use_container_width=True)
-    c4.image(r"images/portfolio_img/colab.png",caption="Google Colab", use_container_width=True)
+    t1,t2,t3,t4,t5 = con5.columns(5)
+    t1.image(r"images/portfolio_img/git.png",caption="Git", use_container_width=True)
+    t2.image(r"images/portfolio_img/anaconda.png",caption="Anaconda Navigator", use_container_width=True)
+    t3.image(r"images/portfolio_img/colab.png",caption="Google Colab", use_container_width=True)
+    t4.image(r"images/portfolio_img/Docker.png",caption="Docker", use_container_width=True)
+    t5.image(r"images/portfolio_img/AWS.png",caption="AWS", use_container_width=True)
     st.markdown("<hr style='border: none; height: 10px; background-color: ##74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
 

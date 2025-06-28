@@ -241,7 +241,7 @@ elif page == "Education":
     c1.subheader('B.Tech')
     c1.subheader('Information Technology')
     c1.subheader("2022-2026")
-    c2.subheader("CGPA: 9.23")
+    c1.subheader("CGPA: 9.23")
     des_img1.image(r"images/knit.gif", use_container_width=True)
 
     des2, des_img2 = st.columns(2)

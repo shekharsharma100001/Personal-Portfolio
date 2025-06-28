@@ -215,7 +215,7 @@ elif page == "Skills":
     f1.image(r"images/portfolio_img/streamlt.png",caption="Streamlit", use_container_width=True)
     f2.image(r"images/portfolio_img/flask.png",caption="Flask", use_container_width=True)
     f3.image(r"images/portfolio_img/FastAPI.png",caption="FastAPI", use_container_width=True)
-    f4.image(r"images/portfolio_img/langChain.png",caption="LangChain", use_container_width=True)
+    f4.image(r"images/portfolio_img/langchain.png",caption="LangChain", use_container_width=True)
     f5.image(r"images/portfolio_img/langgraph-color.png",caption="LangGraph", use_container_width=True)
     f6,f7,f8,f9,f10 = con3.columns(5)
     f6.image(r"images/portfolio_img/llama.png",caption="LlamaIndex", use_container_width=True)

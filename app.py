@@ -308,6 +308,14 @@ elif page == "Experience":
         pic.write("Worked as an Intern  with TechSaksham - A joint CSR initiative of Microsoft & SAP, focusing on AI Technologies")
         des.subheader("Worked on project: Human Pose Estimation using Machine Learning")
         des.write("Developed a system for detecting and analyzing human body poses using advanced machine learning techniques. Gained hands-on experience with OpenCV, MediaPipe, and deep learning frameworks for keypoint detection. Enhanced skills in computer vision, data preprocessing, and model optimization. The project emphasized real-time applications in motion tracking and human-computer interaction.")
+    with st.container(border = True):
+        des,pic = st.columns(2)
+        pic.image(r'images/exp.png',use_container_width=True)
+        des.header("AI: Transformative Learning with TechSaksham")
+        pic.subheader("Edunet Foundation")
+        pic.write("Worked as an Intern  with TechSaksham - A joint CSR initiative of Microsoft & SAP, focusing on AI Technologies")
+        des.subheader("Worked on project: Human Pose Estimation using Machine Learning")
+        des.write("Developed a system for detecting and analyzing human body poses using advanced machine learning techniques. Gained hands-on experience with OpenCV, MediaPipe, and deep learning frameworks for keypoint detection. Enhanced skills in computer vision, data preprocessing, and model optimization. The project emphasized real-time applications in motion tracking and human-computer interaction.")
 
 
 

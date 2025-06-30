@@ -325,7 +325,7 @@ elif page == "Projects":
 
     st.header('PolicyIQ')
     p11, p12 = st.columns(2)
-    p11.image(r"images/portfolio_img/summarizer.png", use_container_width=True)
+    p11.image(r"images/portfolio_img/ins.png", use_container_width=True)
     p12.write('### Project Description:')
     p12.write('Created a web application that predicts premium category of insurance. The model is trained on the dataset and API is built to make predictions.')
     tech_stack = [

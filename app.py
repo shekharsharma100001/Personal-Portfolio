@@ -14,16 +14,19 @@ EMAIL_ADDRESS = st.secrets["email"]
 EMAIL_PASSWORD = st.secrets["pass"]
 RECEIVER_EMAIL = st.secrets["email"]
 
-def send_email(subject, message, sender_email):
-    # Ensure message is utf-8 safe
-    message = message.encode("utf-8", "ignore").decode("utf-8")
 
-    # Create the email content with proper policy
-    msg = MIMEMultipart(policy=policy.SMTP)
+def send_email(subject, message, sender_email):
+    # Handle any weird characters in message (like \xa0) safely
+    message = message.replace('\xa0', ' ')  # Replace non-breaking space with normal space
+
+    # Use SMTPUTF8 policy to allow full UTF-8 content
+    msg = MIMEMultipart(policy=policy.SMTPUTF8)
     msg["From"] = EMAIL_ADDRESS
     msg["To"] = RECEIVER_EMAIL
     msg["Subject"] = subject
-    msg.attach(MIMEText(message, "plain", 'utf-8'))
+
+    # Explicit UTF-8 encoding
+    msg.attach(MIMEText(message, _subtype="plain", _charset="utf-8"))
 
     try:
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
@@ -34,6 +37,7 @@ def send_email(subject, message, sender_email):
     except Exception as e:
         st.error(f"An error occurred: {e}")
         return False
+
 
 
 

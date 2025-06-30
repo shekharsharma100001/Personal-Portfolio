@@ -7,6 +7,7 @@ import os
 from exp import social_icons
 import base64
 from email import policy
+from email.message import EmailMessage
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded",)
 # Email configuration (replace with your own email and password)
@@ -15,28 +16,31 @@ EMAIL_PASSWORD = st.secrets["pass"]
 RECEIVER_EMAIL = st.secrets["email"]
 
 
+
 def send_email(subject, message, sender_email):
-    # Handle any weird characters in message (like \xa0) safely
-    message = message.replace('\xa0', ' ')  # Replace non-breaking space with normal space
-
-    # Use SMTPUTF8 policy to allow full UTF-8 content
-    msg = MIMEMultipart(policy=policy.SMTPUTF8)
-    msg["From"] = EMAIL_ADDRESS
-    msg["To"] = RECEIVER_EMAIL
-    msg["Subject"] = subject
-
-    # Explicit UTF-8 encoding
-    msg.attach(MIMEText(message, _subtype="plain", _charset="utf-8"))
-
     try:
+        # Clean the message (replace non-breaking spaces)
+        message = message.replace('\xa0', ' ')
+
+        # Construct the email using EmailMessage (handles UTF-8 well)
+        msg = EmailMessage()
+        msg['From'] = EMAIL_ADDRESS
+        msg['To'] = RECEIVER_EMAIL
+        msg['Subject'] = subject
+        msg.set_content(message, charset='utf-8')  # Ensure UTF-8
+
+        # Send email
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-            server.sendmail(EMAIL_ADDRESS, RECEIVER_EMAIL, msg.as_string())
+            server.send_message(msg)
+
         return True
+
     except Exception as e:
         st.error(f"An error occurred: {e}")
         return False
+
 
 
 

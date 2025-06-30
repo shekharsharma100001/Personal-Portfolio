@@ -323,6 +323,27 @@ elif page == "Projects":
     st.title(":orange[Personal Projects]")
     st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
 
+    st.header('PolicyIQ')
+    p11, p12 = st.columns(2)
+    p11.image(r"images/portfolio_img/summarizer.png", use_container_width=True)
+    p12.write('### Project Description:')
+    p12.write('Created a web application that predicts premium category of insurance. The model is trained on the dataset and API is built to make predictions.')
+    tech_stack = [
+    "Python - Programming Language",
+    "Streamlit - Frontend Framework for Web Applications",
+    "FastAPI - For building API to make predictions",
+    "Docker & AWS - Dockerized the API and deployed it using AWS EC2 instance"
+    ]
+    # Display the tech stack as a bulleted list
+    p12.write("### Tech Stack:")
+    for tech in tech_stack:
+        p12.write(f"- {tech}")
+    p12.markdown("👉 [**Project Link**](https://ins-pred.streamlit.app/)")
+    p12.markdown("👉 [**Github Repository**](https://github.com/shekharsharma100001/Insurance-premium-prediction-app/tree/master)")
+
+
+    st.markdown("<hr style='border: none; height: 10px; background-color: #74cc08; width: 100%; margin: 20px left;' />", unsafe_allow_html=True)
+
     st.header('StreamDigest')
     p1, p2 = st.columns(2)
     p1.image(r"images/portfolio_img/summarizer.png", use_container_width=True)

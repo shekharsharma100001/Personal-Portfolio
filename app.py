@@ -6,6 +6,7 @@ from email.mime.multipart import MIMEMultipart
 import os
 from exp import social_icons
 import base64
+from email import policy
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded",)
 # Email configuration (replace with your own email and password)
@@ -14,23 +15,26 @@ EMAIL_PASSWORD = st.secrets["pass"]
 RECEIVER_EMAIL = st.secrets["email"]
 
 def send_email(subject, message, sender_email):
-    # Create the email content
-    msg = MIMEMultipart()
+    # Ensure message is utf-8 safe
+    message = message.encode("utf-8", "ignore").decode("utf-8")
+
+    # Create the email content with proper policy
+    msg = MIMEMultipart(policy=policy.SMTP)
     msg["From"] = EMAIL_ADDRESS
     msg["To"] = RECEIVER_EMAIL
     msg["Subject"] = subject
-    msg.attach(MIMEText(message, "plain",'utf-8'))
+    msg.attach(MIMEText(message, "plain", 'utf-8'))
 
     try:
-        # Connect to the Gmail SMTP server
         with smtplib.SMTP("smtp.gmail.com", 587) as server:
-            server.starttls()  # Secure the connection
+            server.starttls()
             server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
             server.sendmail(EMAIL_ADDRESS, RECEIVER_EMAIL, msg.as_string())
         return True
     except Exception as e:
         st.error(f"An error occurred: {e}")
         return False
+
 
 
 ribbon_html = """
